@@ -5,11 +5,7 @@ const express = require("express")
 const app = express()
 
 // routes
-app.get("/", (req, res) => {
-    return res.status(200).json({
-        message: "Welcome to Blood Bank App Server",
-    })
-})
+app.use("/api/v1/test", require("./routes/testRoutes"))
 
 // Port
 const PORT = 8080
